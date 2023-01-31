@@ -65,10 +65,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "^c#ffb86c^ vol %s ", 			"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
-	{ cpu_perc,		 "^c#8be9fd^ cpu %s%% ",       NULL           },
-	{ run_command, "^c#f8f8f2^ temp %s ", 		 "sensors | awk '/^Tctl/ {print $2}'" },
-	{ ram_perc,		 "^c#50fa7b^ mem %s%% ",        NULL           },
-	{ ipv4,  			 "^c#bd93f9^ %s ",           "enp9s0"       },
-	{ datetime,		 "^c#f1fa8c^ %s ",           "%A %b %d %Y, %I:%M %p" },
+	{ run_command, "^c#ffb86c^  %s ", 				"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
+	{ cpu_perc,		 "^c#8be9fd^  %s%%",      NULL           },
+	{ run_command, "^c#8be9fd^ %s ", 		 			"sensors | awk '/^Tctl/ {print $2}'" },
+	{ ram_perc,		 "^c#50fa7b^  %s%% ",      NULL           },
+	{ ipv4,  			 "^c#bd93f9^  %s ",        "enp9s0"       },
+	{ datetime,		 "^c#f1fa8c^  %s ",         "%A %b %d %Y, %I:%M %p" },
 };
