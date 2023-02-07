@@ -70,5 +70,5 @@ static const struct arg args[] = {
 	{ run_command, "^c#8be9fd^ %s ", 		 			"sensors | awk '/^Tctl/ {print $2}'" },
 	{ ram_perc,		 "^c#50fa7b^  %s%% ",      NULL           },
 	{ ipv4,  			 "^c#bd93f9^  %s ",        "enp9s0"       },
-	{ datetime,		 "^c#f1fa8c^  %s ",         "%A %b %d %Y, %I:%M %p" },
+	{ datetime,		 "^c#f1fa8c^  %s ",         "%a %b %d %Y, %I:%M %p" },
 };
