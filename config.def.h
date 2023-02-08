@@ -65,12 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "^c#ffb86c^ vol %s ", 				"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
-	{ cpu_perc,		 "^c#8be9fd^ cpu %s%% ",     	NULL           },
-	{ temp, "^c#f8f8f2^ temp %s°C", 		 	"/sys/class/hwmon/hwmon4/temp1_input" },
-	{ ram_perc,		 "^c#50fa7b^ mem %s%% ",      NULL           },
-	{ wifi_essid,  "^c#ff79c6^ wifi %s ", 			"wlp0s20f3"       },
-	{ ipv4,  			 "^c#ff5555^ ip %s ",         "enp7s0"       },
-	{ battery_perc,"^c#bd93f9^ bat %s%% ",      "BAT1"       },
-	{ datetime,		 "^c#f1fa8c^ %s ",           	"%A %b %d %Y, %I:%M %p" },
+	{ battery_perc,"^c#bd93f9^   %s%% ",      "BAT1"       },
+	{ run_command, "^c#ffb86c^  %s ", 					"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
+	{ cpu_perc,		 "^c#8be9fd^  %s%%",     		NULL           },
+	{ temp, 			 "^c#8be9fd^ %s°C ", 		 			"/sys/class/hwmon/hwmon4/temp1_input" },
+	{ ram_perc,		 "^c#50fa7b^  %s%% ",      	NULL           },
+	{ wifi_essid,  "^c#ff79c6^  %s ", 					"wlp0s20f3"       },
+	{ ipv4,  			 "^c#ff5555^  %s ",          "enp7s0"       },
+	{ datetime,		 "^c#f1fa8c^  %s ",         	"%A %b %d %Y, %I:%M %p" },
 };
