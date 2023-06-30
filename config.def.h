@@ -65,10 +65,12 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "[vol %s]", 				"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
-	{ cpu_perc,		 "[cpu %s%%",      NULL           },
-	{ run_command, " %s]", 		 			"sensors | awk '/^Tctl/ {print $2}'" },
-	{ ram_perc,		 "[ram %s%%]",      NULL           },
-	{ ipv4,  			 "[ip %s]",        "enp9s0"       },
-	{ datetime,		 "[%s]",         "%a %b %d %Y, %I:%M %p" },
+	{ run_command, " 󰕾 %s | ", 				"amixer sget Master | tail -1 | awk '{print $5 }' | sed 's@\\(\\[\\|\\]\\)@@g'" },
+	{ cpu_perc,		 "CPU %s%% | ",     NULL           },
+	{ run_command, "%s | ", 		 			"sensors | awk '/^Tctl/ {print $2}'" },
+	{ ram_perc,		 "󰍛 %s%% | ",      	NULL           },
+	{ ipv4,  			 "󰩠 %s | ",        	"enp9s0"       },
+	{ netspeed_rx, "󰁅 %s ",        		"enp9s0"       },
+	{ netspeed_tx, "󰁝 %s | ",        		"enp9s0"       },
+	{ datetime,		 "%s ",         		"%b %d %Y, %I:%M %p" },
 };
